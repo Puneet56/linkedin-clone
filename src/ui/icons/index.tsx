@@ -1,3 +1,5 @@
+import { AiFillCompass } from 'react-icons/ai';
+
 type IconProps = {
 	icon: React.ReactNode;
 	label: string;
@@ -5,12 +7,9 @@ type IconProps = {
 
 export const BaseIcon = ({ icon, label, ...others }: IconProps) => {
 	return (
-		<div
-			className="flex aspect-square h-12 flex-col items-center justify-center"
-			{...others}
-		>
+		<div className="flex flex-col items-center justify-center" {...others}>
 			{icon}
-			<span className="text-xs">{label}</span>
+			<span className="font-medium text-gray-500">{label}</span>
 		</div>
 	);
 };
@@ -18,8 +17,14 @@ export const BaseIcon = ({ icon, label, ...others }: IconProps) => {
 export const DiscoverIcon = () => {
 	return (
 		<BaseIcon
-			icon={<div className="h-6 w-6 bg-gray-500"></div>}
+			icon={<AiFillCompass className="text-3xl text-gray-500" />}
 			label="Discover"
 		/>
+	);
+};
+
+export const PeopleIcon = () => {
+	return (
+		<BaseIcon icon={<AiFillCompass className="text-xl" />} label="Discover" />
 	);
 };

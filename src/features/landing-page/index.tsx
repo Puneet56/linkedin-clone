@@ -10,7 +10,7 @@ const LandingPage = () => {
 			<h1>
 				<img className="h-12" src={'/logo-with-text.svg'} alt="LinkedIn" />
 			</h1>
-			<div className="flex items-center justify-center">
+			<div className="flex items-center justify-center gap-2">
 				<DiscoverIcon />
 				<DiscoverIcon />
 				<DiscoverIcon />
