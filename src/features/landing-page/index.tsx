@@ -1,3 +1,4 @@
+import { PrimaryButton } from '@/ui/button';
 import CTA from '@/ui/cta';
 import { DiscoverIcon, JobsIcon, LearningIcon, PeopleIcon } from '@/ui/icons';
 import tw from 'tailwind-styled-components';
@@ -11,13 +12,19 @@ const LandingPage = () => {
 			<div className="container mx-auto h-screen">
 				<Header>
 					<img className="h-12" src={'/logo-with-text.svg'} alt="LinkedIn" />
-					<div className="flex items-center justify-center gap-2">
+					<div className="hidden items-center justify-center gap-2 lg:flex">
 						<DiscoverIcon />
 						<PeopleIcon />
 						<LearningIcon />
 						<JobsIcon />
 						<div className="h-12 border"></div>
+						<PrimaryButton title="Sign In" onClick={() => {}} />
 					</div>
+					<PrimaryButton
+						className="lg:hidden"
+						title="Sign In"
+						onClick={() => {}}
+					/>
 				</Header>
 				<div className="flex flex-col items-center justify-center gap-16 lg:flex-row">
 					<div className="h-full flex-1 flex-col items-center justify-start">
