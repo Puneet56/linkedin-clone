@@ -5,11 +5,20 @@ import { MdOutlineOndemandVideo, MdPeopleAlt } from 'react-icons/md';
 type IconProps = {
 	icon: React.ReactNode;
 	label: string;
+	onClick?: () => void;
 };
 
-export const BaseIcon = ({ icon, label, ...others }: IconProps) => {
+export const Icon = ({
+	icon,
+	label,
+	onClick = () => {},
+	...others
+}: IconProps) => {
 	return (
-		<div className="flex w-16 flex-col items-center justify-center" {...others}>
+		<div
+			className="flex w-16 cursor-pointer flex-col items-center justify-center"
+			{...others}
+		>
 			{icon}
 			<span className="font-medium text-gray-500">{label}</span>
 		</div>
@@ -18,7 +27,7 @@ export const BaseIcon = ({ icon, label, ...others }: IconProps) => {
 
 export const DiscoverIcon = () => {
 	return (
-		<BaseIcon
+		<Icon
 			icon={<AiFillCompass className="text-3xl text-gray-500" />}
 			label="Discover"
 		/>
@@ -27,7 +36,7 @@ export const DiscoverIcon = () => {
 
 export const PeopleIcon = () => {
 	return (
-		<BaseIcon
+		<Icon
 			icon={<MdPeopleAlt className="text-3xl text-gray-500" />}
 			label="People"
 		/>
@@ -36,7 +45,7 @@ export const PeopleIcon = () => {
 
 export const LearningIcon = () => {
 	return (
-		<BaseIcon
+		<Icon
 			icon={<MdOutlineOndemandVideo className="text-3xl text-gray-500" />}
 			label="Learning"
 		/>
@@ -45,7 +54,7 @@ export const LearningIcon = () => {
 
 export const JobsIcon = () => {
 	return (
-		<BaseIcon
+		<Icon
 			icon={<BsBriefcaseFill className="text-3xl text-gray-500" />}
 			label="Jobs"
 		/>

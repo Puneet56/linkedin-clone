@@ -4,7 +4,7 @@ type ButtonProps = {
 	className?: string;
 };
 
-export const BaseButton: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
 	title = '',
 	onClick = () => {},
 	className = '',
@@ -29,7 +29,7 @@ export const PrimaryButton: React.FC<ButtonProps> = ({
 	...other
 }) => {
 	return (
-		<BaseButton
+		<Button
 			{...other}
 			className={`border border-blue-600 text-blue-600  ${className}`}
 			onClick={onClick}
