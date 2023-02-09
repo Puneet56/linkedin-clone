@@ -1,6 +1,7 @@
 import { PrimaryButton } from '@/ui/button';
 import CTA from '@/ui/cta';
 import { DiscoverIcon, JobsIcon, LearningIcon, PeopleIcon } from '@/ui/icons';
+import Link from 'next/link';
 import tw from 'tailwind-styled-components';
 
 const Header = tw.header`w-full flex items-center justify-around p-4
@@ -18,13 +19,17 @@ const LandingPage = () => {
 						<LearningIcon />
 						<JobsIcon />
 						<div className="h-12 border"></div>
-						<PrimaryButton title="Sign In" onClick={() => {}} />
+						<Link href={'/login'}>
+							<PrimaryButton title="Sign In" onClick={() => {}} />
+						</Link>
 					</div>
-					<PrimaryButton
-						className="lg:hidden"
-						title="Sign In"
-						onClick={() => {}}
-					/>
+					<Link href={'/login'}>
+						<PrimaryButton
+							className="lg:hidden"
+							title="Sign In"
+							onClick={() => {}}
+						/>
+					</Link>
 				</Header>
 				<div className="flex flex-col items-center justify-center gap-16 lg:flex-row">
 					<div className="h-full flex-1 flex-col items-center justify-start">

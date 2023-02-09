@@ -3,7 +3,7 @@ import Auth from '@/features/auth';
 const LoginScreen = () => {
 	return (
 		<>
-			<Auth action="login" />
+			<Auth action="register" />
 		</>
 	);
 };
